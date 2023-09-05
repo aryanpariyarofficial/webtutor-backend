@@ -3,7 +3,7 @@ export const sendToken = (res, user, message, statusCode = 200) => {
     const options = {
       expires: new Date(Date.now() + 15 * 24 * 60 * 60 * 1000),
       httpOnly: true,
-      // secure: true, // only comment on local host uncommet in live server
+      secure: true, // only comment on local host uncommet in live server
       
       sameSite: "none",
     };
